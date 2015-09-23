@@ -28,7 +28,7 @@ class ArraysController < ApplicationController
     #==========================================
     numbers = ["one", "two", "three", "four", "five"]
 
-    @result = "replace this string with your answer"
+    @result = numbers[4]
     render 'arrays'
   end
 
@@ -39,7 +39,7 @@ class ArraysController < ApplicationController
     #==========================================
     fruits = ["apples", "oranges", "bananas", "kiwis"]
 
-    @result = fruits
+    @result = fruits[0]
     render 'arrays'
   end
 
@@ -50,7 +50,7 @@ class ArraysController < ApplicationController
     #==========================================
     neighborhoods = ["Bridgeport", "Andersonville", "Avondale", "Lincoln Park"]
 
-    @result = "replace this string with your answer"
+    @result = neighborhoods[1]
     render 'arrays'
   end
 
@@ -81,6 +81,7 @@ class ArraysController < ApplicationController
     # Add the color "black" to the end of the array
     #==========================================
     colors = ["red", "green", "blue"]
+    colors << "black"
 
     @result = colors
     render 'arrays'
@@ -94,7 +95,7 @@ class ArraysController < ApplicationController
       "The Godfather",
       "The Godfather: Part II"
     ]
-
+    classics << "Apocalypse Now"
     @result = classics
     render 'arrays'
   end
@@ -104,6 +105,7 @@ class ArraysController < ApplicationController
     # Add "fútbol" and "football" to the end of the array
     #==========================================
     sports = [ "curling", "chess", "trampolining" ]
+    sports << "fútbol" << "football"
 
     @result = sports
     render 'arrays'
