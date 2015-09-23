@@ -45,8 +45,13 @@ class BasicsController < ApplicationController
     # to the '@result' variable.
     #============================================
 
+    # first_name = "jane"
+    # last_name = "doe"
+    # @result = first_name.capitalize + " " + last_name.capitalize
+
     name = "jane doe"
-    @result = name
+    @result  = name.capitalize
+
     render "basics"
   end
 
@@ -75,7 +80,7 @@ class BasicsController < ApplicationController
     workout = "I think at the gym today I'm going to do 30 min of cardio. It's chest and bi's today so I'm going to do 5 sets on the bench and then switch it up with..."
     sleep = "Also, I had the most intersting dream last night..."
 
-    @result = "replace this string with your answer"
+    @result = weather + " " + health + " " + kids + " " + workout + " " + sleep
     render "basics"
   end
 
@@ -101,7 +106,7 @@ class BasicsController < ApplicationController
     # Create a random number between 3 and 7.
     #============================================
 
-    @result = 'replace this string with your answer'
+    @result = rand(3..7)
     render "basics"
   end
 
@@ -145,7 +150,7 @@ class BasicsController < ApplicationController
     age = rand(50) + 18
     phrase4 = "years old. What am I doing with my life?"
 
-    @result = "replace this string with your answer"
+    @result = phrase1 + " " + money.to_s + " " + currency + " " + phrase2 + " " + restaurant + " " + phrase3 + " " + age.to_s + " " + phrase4
     render "basics"
   end
 
